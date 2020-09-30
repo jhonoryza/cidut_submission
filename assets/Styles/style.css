@@ -6,16 +6,24 @@ body {
     padding: 0;
 }
 h1{
-    color: whitesmoke;
+    color:darkgrey;
     text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px darkgrey, 0 0 20px darkgrey, 0 0 30px darkgrey, 0 0 40px darkgrey, 0 0 50px darkgrey, 0 0 60px darkgrey, 0 0 70px darkgrey;
+  }
+  to {
+    text-shadow: 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 30px whitesmoke, 0 0 40px whitesmoke, 0 0 50px whitesmoke, 0 0 60px whitesmoke, 0 0 70px whitesmoke;
+  }
 }
 h2 {
     color: #00a2c6;
     text-align: center;
-}
-h3 {
-    color: green;
-    text-align: left;
 }
 footer {
     padding: 5px;
@@ -26,6 +34,7 @@ footer {
 }
 p {
     line-height: 2em;
+    text-indent: 50px;
 }
 nav a {
     font-size: 18px;
@@ -36,10 +45,10 @@ nav a {
 nav a:hover {
     font-weight: 900;
 }
-.profile Header {
-     Text-align: center;
+header {
+    display: inline;
 }
-.AC {
+.AC, .RE8 {
     max-width: 75%; 
     display:block; 
     height: auto;
@@ -47,13 +56,8 @@ nav a:hover {
     margin-right: auto;
     padding: 0.5em;
 }
-.RE8 {
-    max-width: 75%; 
-    display:block; 
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
+.profile {
+    width: 50%;
 }
 .FF16 {
     max-width: 75%;
@@ -64,30 +68,12 @@ nav a:hover {
     object-position: center;
     padding: 0.5em;    
 }
-.FFimg1 {
+.FFimg1, .FFimg {
     max-width: 90%;
     display:block; 
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    padding: 0.5em;
-}
-.FFimg {
-    max-width: 90%;
-    display:block; 
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    object-position: center;
-    padding: 0.5em;
-}
-.FFimg {
-    max-width: 90%;
-    display:block; 
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    object-position: center;
     padding: 0.5em;
 }
 .Shiva {
@@ -99,9 +85,6 @@ nav a:hover {
     object-position: center;
     padding: 0.5em;
 }
-.profile image {
-    width: 200px;
-}
 .card {
     -webkit-box-shadow: 1px 4px 11px 7px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 4px 11px 7px rgba(0,0,0,0.75);
@@ -109,35 +92,37 @@ nav a:hover {
     border-radius: 30px;
     padding: 20px;
     margin-top: 20px;
-    text-align: center;
+    text-indent: 50px;
+    text-align: justify; 
 }
  .Jumbotron {
     font-size: 20px;
     padding: 60px;
     background-color: rgb(34, 34, 34); 
     text-align: center;
-    color: white;
 }
- nav li {
+nav li {
     display: inline;
     list-style-type: none;
     margin-right: 20px;
 }
- nav {
+nav {
     background-color: #00a2c6;
     padding: 5px;
+    position:sticky;
+    top: 0;
 }
- main {
+main {
     padding: 20px;
     overflow:auto;
 }
-
 strong {
     color: #00a2c6
 }
 #content {
     float: left;
-    width: 75%;
+    width: 50%;
+    text-align: left;
 }
 aside {
     float: right;
@@ -147,3 +132,81 @@ aside {
 figure {
     text-align: center;
 }
+* {
+    box-sizing: border-box;
+ }
+ @media screen and (max-width: 1000px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+ }
+ .slider-container {
+    max-width: 300px;
+    position: relative;
+    margin: auto;
+}
+.slide-show {
+    display: none
+}
+.prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 20%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color:darkgray;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
