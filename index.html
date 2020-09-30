@@ -1,48 +1,36 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Playstation 5</title>
-    <link rel="stylesheet" href="assets/Styles/style.css">
+    <div w3-include-html="component/head.html"></div>
 </head>
 
 <body>
     <header>
-        <div class="Jumbotron">
-            <h1>GAME-MYTH</h1>
-            <h1>All about games news inside</h1>
-            <h1>~Life your Own Game~</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a id="tombol-home" href="#Home">Home</a></li>
-                <li><a id="tombol-news" href="#News">News</a></li>                
-                <li><a id="tombol-contact" href="#Contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div w3-include-html="component/jumbotron.html"></div>
+        <div w3-include-html="component/navigation.html"></div>
         <div class="slider-container">
             <div class="slide-show">
                 <div class="numbertext">1/3</div>
                 <img class='slider-image' src="assets/image/Ubisoft.jpg">
-                </div>
-            <div class ="slide-show">
+            </div>
+            <div class="slide-show">
                 <div class="numbertext">2/3</div>
                 <img class='slider-image' src="assets/image/capcom.png">
-                </div>
-            <div class ="slide-show">
+            </div>
+            <div class="slide-show">
                 <div class="numbertext">3/3</div>
                 <img class='slider-image' src="assets/image/square.png">
             </div>
-            
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
         <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-          </div>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </header>
     <main>
         <label for="bulan">Arsip:</label>
@@ -56,7 +44,8 @@
             <button onclick="myFunction()">Click me</button>
         </div>
         <div>
-            <h2 id="News">Tiga game <q>franchise series</q> paling ditunggu di console <strong>Playstation 5</strong>..!!</h2>
+            <h2 id="News">Tiga game <q>franchise series</q> paling ditunggu di console <strong>Playstation
+                    5</strong>..!!</h2>
             <p lang="id">Sony membutuhkan waktu tujuh tahun untuk memproduksi sebuah console terbaru. Semenjak
                 Playstation 4 dirilis untuk pertama kali 15 november 2013 di North America, produk tersebut terjual
                 hampir 100 juta unit di seluruh dunia. Kini dengan pencapaian tersebut tak pelak Sony percaya
@@ -136,7 +125,7 @@
                 <p>Dilihat dari trailer yang telah dirilis, konsep cerita nya mungkin mirip dengan resident evil 4,
                     dimana kita akan berada pada sebuah desa/village untuk menguak okultisme yang terjadi. Game yang
                     dibuat dengan Re engine ini tentu akan terasa sangat impresif di <strong>Playstation 5</font>
-                        </strong>.</p>
+                    </strong>.</p>
                 <figure>
                     <img src="assets/image/maxresdefault.jpg" class="RE8" alt="RE 8">
                     <figcaption>
