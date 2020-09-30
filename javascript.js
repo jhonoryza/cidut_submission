@@ -2,6 +2,35 @@ function myFunction() {
     alert('Arsip percobaan javascript');
 }
 
+window.addEventListener('resize', changeNavigasi);
+
+function changeNavigasi() {
+    //resize just happened, pixels changed
+    // console.log(screen.width);
+    let lebarLayar = screen.width;
+    if (lebarLayar < 600) {
+        let tombolHome = document.getElementById('tombol-home');
+        tombolHome.setAttribute('style', 'padding: 10px');
+
+        let tombolNews = document.getElementById('tombol-news');
+        tombolNews.setAttribute('style', 'padding: 10px');
+
+        let tombolKontak = document.getElementById('tombol-contact');
+        tombolKontak.setAttribute('style', 'padding: 10px');
+    } else {
+        let tombolHome = document.getElementById('tombol-home');
+        tombolHome.setAttribute('style', 'padding: 20px');
+
+        let tombolNews = document.getElementById('tombol-news');
+        tombolNews.setAttribute('style', 'padding: 20px');
+
+        let tombolKontak = document.getElementById('tombol-contact');
+        tombolKontak.setAttribute('style', 'padding: 20px');
+    }
+}
+
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 

@@ -37,10 +37,14 @@ p {
     text-indent: 50px;
 }
 nav a {
+    color: darkgrey;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(34, 34, 34);
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
-    color:white;
+    /* color:white; */
 }
 nav a:hover {
     font-weight: 900;
@@ -120,8 +124,9 @@ strong {
     color: #00a2c6
 }
 #content {
+    padding-left: 15.5em;    
     float: left;
-    width: 50%;
+    width: 75%;
     text-align: left;
 }
 aside {
